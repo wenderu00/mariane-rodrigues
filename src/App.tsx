@@ -1,6 +1,7 @@
 import Hero from './components/Hero'
 import Sobre from './components/Sobre'
 import Servicos from './components/Servicos'
+import Contato from './components/Contato'
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <Hero />
       <Sobre />
       <Servicos />
+      <Contato />
     </main>
   )
 }

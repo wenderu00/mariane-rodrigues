@@ -1,14 +1,10 @@
-import logo from '../assets/logo.png'
+import LogoBrand from './LogoBrand'
 
 export default function Hero() {
   return (
     <section className="bg-surface-muted px-6 py-20 text-center md:py-32">
-      <h1>
-        <img
-          src={logo}
-          alt="Mariane Rodrigues — Advocacia e Consultoria Jurídica"
-          className="mx-auto w-72 md:w-96"
-        />
+      <h1 className="flex justify-center">
+        <LogoBrand />
       </h1>
       <p className="mt-8 font-sans text-base text-brand-light md:text-lg">
         Seu direito, defendido com dedicação e preparo.

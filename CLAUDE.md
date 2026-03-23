@@ -41,6 +41,10 @@ src/
 - Tailwind para todos os estilos — sem CSS externo
 - Tokens de design definidos via `@theme` em `src/index.css`
 
+## Git
+
+**Nunca faça `git push` sem instrução explícita do usuário.** Commits locais são permitidos, mas o push só acontece quando o usuário pedir.
+
 ## Deploy
 
 **O deploy nunca deve ser feito automaticamente.** Só pode ser executado manualmente pelo usuário.

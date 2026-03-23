@@ -19,7 +19,7 @@ export default function ServiceCard({ title, description }: Props) {
       className="bg-dusty-rose p-7 flex flex-col gap-3 cursor-default"
     >
       <h3 className="font-serif text-lg text-brand">{title}</h3>
-      <p className="font-sans text-sm leading-relaxed text-brand-hover">{description}</p>
+      <p className="font-sans text-sm leading-relaxed text-black">{description}</p>
     </motion.li>
   )
 }

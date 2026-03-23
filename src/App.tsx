@@ -1,7 +1,15 @@
+import Hero from './components/Hero'
+import Sobre from './components/Sobre'
+import Servicos from './components/Servicos'
+import Contato from './components/Contato'
+
 export default function App() {
   return (
     <main className="bg-surface font-sans">
-      <h1 className="font-serif text-brand">Mariane Rodrigues</h1>
+      <Hero />
+      <Sobre />
+      <Servicos />
+      <Contato />
     </main>
   )
 }

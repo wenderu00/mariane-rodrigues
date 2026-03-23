@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #5C2E1A;
-  --color-brand-light: #7A4030;
-  --color-surface: #FFFFFF;
-  --color-surface-muted: #E8E4DF;
+  --color-brand: #5f412e;
+  --color-brand-hover: #7b5b4c;
+  --color-accent: #9b725e;
+  --color-dusty-rose: #d4afa0;
+  --color-warm-gray: #dcdcd8;
+  --color-surface: #ffffff;
 
   --font-family-serif: 'Playfair Display', Georgia, serif;
   --font-family-sans: Inter, sans-serif;

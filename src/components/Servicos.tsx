@@ -1,3 +1,5 @@
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import ServiceCard from './ServiceCard'
 
 const services = [
@@ -23,16 +25,41 @@ const services = [
   },
 ]
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+}
+
 export default function Servicos() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-60px' })
+
   return (
-    <section className="py-20 px-6 bg-stone-50">
+    <section className="bg-surface px-6 py-20">
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-serif text-3xl text-stone-800 mb-10 text-center">Áreas de Atuação</h2>
-        <ul className="grid gap-6 sm:grid-cols-2">
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="font-serif text-3xl text-brand mb-10 text-center"
+        >
+          Áreas de Atuação
+        </motion.h2>
+        <motion.ul
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="grid gap-px sm:grid-cols-2 bg-warm-gray"
+        >
           {services.map((service) => (
             <ServiceCard key={service.title} title={service.title} description={service.description} />
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   )

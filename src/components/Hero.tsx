@@ -1,20 +1,30 @@
+import { motion } from 'framer-motion'
 import LogoBrand from './LogoBrand'
 
 export default function Hero() {
   return (
-    <section className="bg-surface-muted px-6 py-20 text-center md:py-32">
-      <h1 className="flex justify-center">
-        <LogoBrand />
-      </h1>
-      <p className="mt-8 font-sans text-base text-brand-light md:text-lg">
-        Seu direito, defendido com dedicação e preparo.
-      </p>
-      <a
-        href="#contato"
-        className="mt-10 inline-block bg-brand px-8 py-3 font-sans text-sm font-medium text-white transition-colors hover:bg-brand-light"
+    <section className="bg-surface px-6 py-24 text-center md:py-36">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="flex flex-col items-center gap-8"
       >
-        Entre em contato
-      </a>
+        <h1 className="flex justify-center">
+          <LogoBrand />
+        </h1>
+        <p className="font-sans text-base text-brand-hover md:text-lg">
+          Seu direito, defendido com dedicação e preparo.
+        </p>
+        <motion.a
+          href="#contato"
+          whileHover={{ letterSpacing: '0.08em' }}
+          transition={{ duration: 0.3 }}
+          className="inline-block bg-brand px-10 py-3 font-sans text-sm font-medium tracking-widest text-white transition-colors duration-300 hover:bg-brand-hover"
+        >
+          Entre em contato
+        </motion.a>
+      </motion.div>
     </section>
   )
 }

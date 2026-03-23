@@ -18,8 +18,9 @@ export default function Hero() {
         </p>
         <motion.a
           href="#contato"
-          whileHover={{ letterSpacing: '0.08em' }}
-          transition={{ duration: 0.3 }}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
           className="inline-block bg-brand px-10 py-3 font-sans text-sm font-medium tracking-widest text-white transition-colors duration-300 hover:bg-brand-hover"
         >
           Entre em contato

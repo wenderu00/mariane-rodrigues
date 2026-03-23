@@ -45,6 +45,8 @@ src/
 
 **Nunca faça `git push` sem instrução explícita do usuário.** Commits locais são permitidos, mas o push só acontece quando o usuário pedir.
 
+**Nunca abra PR sem instrução explícita do usuário.** Várias missões podem ser executadas na mesma branch — crie uma branch ao iniciar e mantenha até o usuário solicitar o PR.
+
 ## Deploy
 
 **O deploy nunca deve ser feito automaticamente.** Só pode ser executado manualmente pelo usuário.
